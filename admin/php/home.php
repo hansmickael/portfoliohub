@@ -80,7 +80,7 @@
   </div>
   <div class="form-row">
   <div class="form-group col-md-9">
-    <label for="profession">Proffesion Titles (Separate with ',' comma)</label>
+    <label for="profession">Profession Titles (Separate with ',' comma)</label>
     <input type="text" class="form-control" name="profession" value="<?=$data['professions']?>" id="profession" placeholder="Web Developer,PHP Developer,Graphic Designer">
   </div>
   <div class="form-group col-md-3">
