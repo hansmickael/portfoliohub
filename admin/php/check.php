@@ -14,7 +14,7 @@ if(isset($_POST['login'])){
     if($result){
         $_SESSION['id']=$result['id'];
         $_SESSION['username']=$result['username'];
-        header('location:../');
+        header('location:../index.php');
     }else{
         header('location:../login/?msg=iuser');    }
     
