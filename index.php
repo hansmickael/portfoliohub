@@ -1,7 +1,7 @@
 <?php include('./include/db.php'); 
 $query = "SELECT * FROM basic_setup,personal_setup,aboutus_setup";
-$runquery = mysqli_query($conn,$query);
-if(!$conn){
+$runquery = mysqli_query($db,$query);
+if(!$db){
     header("location:index-2.html");
 }
 $data = mysqli_fetch_array($runquery);
@@ -180,7 +180,7 @@ $data = mysqli_fetch_array($runquery);
                     <div class="row col-lg-12" data-aos="fade-up">
 <?php
                     $query3 = "SELECT * FROM skills";
-$runquery3= mysqli_query($conn,$query3);
+$runquery3= mysqli_query($db,$query3);
 while($data3=mysqli_fetch_array($runquery3)){
     ?>
                         <div class="progress col-lg-6">
@@ -215,7 +215,7 @@ while($data3=mysqli_fetch_array($runquery3)){
                         <h3 class="resume-title">Education</h3>
                         <?php
                     $query4 = "SELECT * FROM resume WHERE category='e'";
-$runquery4= mysqli_query($conn,$query4);
+$runquery4= mysqli_query($db,$query4);
 while($data4=mysqli_fetch_array($runquery4)){
     ?>
                     <div class="resume-item">
@@ -236,7 +236,7 @@ while($data4=mysqli_fetch_array($runquery4)){
                         
                         <?php
                     $query4 = "SELECT * FROM resume WHERE category='pe'";
-$runquery4= mysqli_query($conn,$query4);
+$runquery4= mysqli_query($db,$query4);
 while($data4=mysqli_fetch_array($runquery4)){
     ?>
                     <div class="resume-item">
@@ -267,7 +267,7 @@ while($data4=mysqli_fetch_array($runquery4)){
 
                    <?php
                     $query5 = "SELECT * FROM portfolio";
-$runquery5= mysqli_query($conn,$query5);
+$runquery5= mysqli_query($db,$query5);
 while($data5=mysqli_fetch_array($runquery5)){
     ?>
                   <div class="col-lg-4 col-md-6 portfolio-item">
