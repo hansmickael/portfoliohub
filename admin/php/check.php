@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['username'])){
-    header('location:../index.php');
+    header('location:../');
 }
 include("../../include/db.php");
 if(isset($_POST['login'])){
@@ -14,7 +14,7 @@ if(isset($_POST['login'])){
     if($result){
         $_SESSION['id']=$result['id'];
         $_SESSION['username']=$result['username'];
-        header('location:../index.php');
+        header('location:../');
     }else{
         header('location:../login/?msg=iuser');    }
     
