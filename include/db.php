@@ -1,6 +1,6 @@
 <?php
 // Initialize the MySQLi connection with SSL
-$conn = mysqli_init();
+$db = mysqli_init();
 
 // Define the path to the SSL certificate
 $ssl_cert_path = __DIR__ . "/DigiCertGlobalRootCA.crt.pem";
@@ -11,10 +11,10 @@ if (!file_exists($ssl_cert_path)) {
 }
 
 // Set up SSL for the MySQL connection
-mysqli_ssl_set($conn, NULL, NULL, $ssl_cert_path, NULL, NULL);
+mysqli_ssl_set($db, NULL, NULL, $ssl_cert_path, NULL, NULL);
 
 // Establish the connection using SSL
-if (!mysqli_real_connect($conn, "portfoliohub.mysql.database.azure.com", "hans", "charles1123@", "iportfolio", 3306, NULL, MYSQLI_CLIENT_SSL)) {
+if (!mysqli_real_connect($db, "portfoliohub.mysql.database.azure.com", "hans", "charles1123@", "iportfolio", 3306, NULL, MYSQLI_CLIENT_SSL)) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
@@ -26,5 +26,5 @@ if (mysqli_connect_errno()) {
 
 echo "Successfully connected to the database.";
 
-// You can now use $conn for your database operations
+// You can now use $db for your database operations
 ?>
