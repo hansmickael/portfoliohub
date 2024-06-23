@@ -17,7 +17,7 @@
       <?php
   } } 
 ?>  
-         <form method="post" action="php/useo.php" enctype="multipart/form-data">
+         <form method="post" action="php/seo.php" enctype="multipart/form-data">
   <div class="form-row">
   <div class="form-group col-md-12">
 <img src="../assets/img/<?=$data['icon']?>" class="img-thumbnail ooo">
